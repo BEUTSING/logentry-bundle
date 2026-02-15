@@ -1,0 +1,17 @@
+{
+    "name": "beutsing/log-entry-bundle",
+    "description": "Recording of user activities.",
+    "type": "symfony-bundle",
+    "require": {
+        "symfony/framework-bundle": "7.0",
+        "doctrine/orm": "2.15",
+        "symfony/security-bundle": "6.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Beutsing\\LogEntryBundle\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
