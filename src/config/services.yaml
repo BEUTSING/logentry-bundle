@@ -1,0 +1,5 @@
+services:
+    Beutsing\LogEntryBundle\Service\LogEntryService:
+        autowire: true
+        autoconfigure: true
+        public: true
