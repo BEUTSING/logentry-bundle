@@ -31,6 +31,7 @@ Si le bundle est en local (non publié sur Packagist), ajoute ceci dans le compo
 ** Le chemin ../log-entry-bundledoit pointer vers le dossier de ton bundle.
 
 2️⃣ Installer le bundle
+
 composer require beutsing/log-entry-bundle:@dev
 
 3️⃣ Mettre à jour la base de données
@@ -52,7 +53,7 @@ php bin/console doctrine:migrations:migrate
 
 
 
-** Utilisation
+** Utilisation exmple
 
 Injecte le service LogEntryServicedans
 
@@ -82,6 +83,8 @@ class TestLogController extends AbstractController
 
 
 ** Méthode disponible
+
+
 log(string $action, string $message, ?string $entityName = null): void
 
 Paramètres :
