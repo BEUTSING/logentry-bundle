@@ -16,6 +16,15 @@ Il permet d'enregistrer :
 
 
 ** Installation
+ 
+
+⚠️ Important :
+Cette documentation décrit l’installation et l’utilisation du bundle en local uniquement (via Path Repository).
+Le bundle n’est pas encore publié sur Packagist.
+Cette procédure est donc destinée aux tests et au développement local.
+
+
+
 1️⃣ Ajouter le bundle en local (Path Repository)
 
 Si le bundle est en local (non publié sur Packagist), ajoute ceci dans le composer.json de votre projet Symfony :
@@ -30,24 +39,29 @@ Si le bundle est en local (non publié sur Packagist), ajoute ceci dans le compo
 
 ** Le chemin ../log-entry-bundledoit pointer vers le dossier de ton bundle.
 
+
 2️⃣ Installer le bundle
 
 composer require beutsing/log-entry-bundle:@dev
 
+
+
 3️⃣ Mettre à jour la base de données
 
-Créer la base si nécessaire :
+⚠️ Important :
+La création de la base de données n’est pas incluse dans le bundle.
+Elle est nécessaire uniquement si vous n’avez pas encore de base configurée et que vous souhaitez tester le bundle.
 
+Créer la base si nécessaire
 php bin/console doctrine:database:create
 
 
-Mettre à jour le schéma :
+Cette étape est requise uniquement si aucune base de données n’existe encore dans votre projet Symfony.
 
+Mettre à jour le schéma
 php bin/console doctrine:schema:update --force
 
-
-Ou si tu utilise les migrations :
-
+Ou si vous utilisez les migrations
 php bin/console doctrine:migrations:diff
 php bin/console doctrine:migrations:migrate
 
