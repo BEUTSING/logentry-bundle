@@ -15,6 +15,7 @@ class LogEntryService
     public function log(
         string $action,
         string $message,
+        ?string $companyid,
         ?string $entityName = null
     ): void {
         $user = $this->security->getUser();
@@ -24,6 +25,7 @@ class LogEntryService
             $user ? $user->getUserIdentifier() : 'anonymous'
         );
         $log->setAction($action);
+        $log->setCompanyid($companyid);
         $log->setEntityName($entityName);
         $log->setMessage($message);
 

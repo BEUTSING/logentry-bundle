@@ -16,6 +16,9 @@ class LogEntry
     #[ORM\Column(length: 180)]
     private string $userIdentifier;
 
+    #[ORM\Column(length:180, nullable: true)]
+    private ?string $companyid = null;
+
     #[ORM\Column(length: 100)]
     private string $action;
 
@@ -50,6 +53,11 @@ class LogEntry
         return $this->action;
     }
 
+    public function getCompanyid(): ?string
+    {
+        return $this->companyid;
+    }
+
     public function getEntityName(): ?string
     {
         return $this->entityName;
@@ -76,6 +84,12 @@ class LogEntry
     public function setAction(string $action): self
     {
         $this->action = $action;
+        return $this;
+    }
+
+     public function setCompanyid(?string $companyid): self
+    {
+        $this->companyid = $companyid;
         return $this;
     }
 

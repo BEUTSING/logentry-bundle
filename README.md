@@ -18,7 +18,7 @@ Il permet d'enregistrer :
 ** Installation
 1️⃣ Ajouter le bundle en local (Path Repository)
 
-Si le bundle est en local (non publié sur Packagist), ajoute ceci dans le composer.jsonde votre projet Symfony :
+Si le bundle est en local (non publié sur Packagist), ajoute ceci dans le composer.json de votre projet Symfony :
 
 "repositories": [
     {

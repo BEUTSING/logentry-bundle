@@ -3,9 +3,9 @@
     "description": "Recording of user activities.",
     "type": "symfony-bundle",
     "require": {
-        "symfony/framework-bundle": "7.4.*",
+        "symfony/framework-bundle": "^7.0",
         "doctrine/orm": "^3.0",
-        "symfony/security-bundle": "7.4.*"
+        "symfony/security-bundle": "^7.0"
     },
     "license": "MIT",
     "autoload": {
