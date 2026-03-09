@@ -13,20 +13,5 @@
             "Beutsing\\LogEntryBundle\\": "src/"
         }
     },
-    "minimum-stability": "stable",
-
-    "scripts": {
-    "post-install-cmd": [
-       "@echo 'LogEntryBundle installed successfully.'",
-       "@echo 'Run the following command to create the table:'",
-       "@echo 'php bin/console make:migration'",
-       "@echo 'php bin/console doctrine:migrations:migrate'"
-
-   ],
-   "post-update-cmd": [ 
-        "@echo 'LogEntryBundle installed successfully.'", 
-        "@echo 'Run the following command to create the table:'", 
-        "@echo 'php bin/console make:migration'", 
-        "@echo 'php bin/console doctrine:migrations:migrate'" ]
-    }
+    "minimum-stability": "stable"
 }

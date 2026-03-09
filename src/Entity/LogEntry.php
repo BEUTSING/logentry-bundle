@@ -22,9 +22,6 @@ class LogEntry
     #[ORM\Column(length: 100)]
     private string $action;
 
-    #[ORM\Column(length: 150, nullable: true)]
-    private ?string $entityName = null;
-
     #[ORM\Column(length: 255)]
     private string $message;
 
@@ -58,11 +55,6 @@ class LogEntry
         return $this->companyid;
     }
 
-    public function getEntityName(): ?string
-    {
-        return $this->entityName;
-    }
-
     public function getMessage(): string
     {
         return $this->message;
@@ -90,12 +82,6 @@ class LogEntry
      public function setCompanyid(?string $companyid): self
     {
         $this->companyid = $companyid;
-        return $this;
-    }
-
-    public function setEntityName(?string $entityName): self
-    {
-        $this->entityName = $entityName;
         return $this;
     }
 

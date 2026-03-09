@@ -16,7 +16,6 @@ class LogEntryService
         string $action,
         string $message,
         ?string $companyid,
-        ?string $entityName = null
     ): void {
         $user = $this->security->getUser();
 
@@ -26,7 +25,6 @@ class LogEntryService
         );
         $log->setAction($action);
         $log->setCompanyid($companyid);
-        $log->setEntityName($entityName);
         $log->setMessage($message);
 
         $this->entityManager->persist($log);
