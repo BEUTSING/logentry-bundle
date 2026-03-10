@@ -61,6 +61,7 @@ class SomeController extends AbstractController
         return $this->json(['status' => 'ok']);
     }
 }
+```
 
 Notes
 
