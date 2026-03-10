@@ -69,4 +69,9 @@ The log service can be injected in any controller or service using Symfony's aut
 
 The `createdAt` field is automatically set when a log entry is created.
 The `userIdentifier` field is automatically filled with the identifier of the currently authenticated user (email, username, etc.).
+If you run `composer update beutsing/log-entry-bundle` to update the bundle, you must also execute the migration commands to update your database:
+
+```bash
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
 
