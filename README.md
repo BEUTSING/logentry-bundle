@@ -68,4 +68,3 @@ The log service can be injected in any controller or service using Symfony's aut
 
 The createdAt field is automatically set when a log entry is created.
 
-You can configure the table name and automatic logging through config/packages/beutsing_log_entry.yaml:
