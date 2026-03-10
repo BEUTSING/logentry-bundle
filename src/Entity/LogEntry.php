@@ -22,7 +22,7 @@ class LogEntry
     #[ORM\Column(length: 100)]
     private string $action;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: 'text')]
     private string $message;
 
     #[ORM\Column]

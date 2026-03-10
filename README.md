@@ -32,14 +32,14 @@ Symfony will generate a migration file like Version20260309XXXXXX.php (depending
 
 The log_entry table includes the following fields:
 
-Field|Description
+`Field` | `Description`
 -----|-------
 id	|	Unique identifier of the log
 userIdentifier|	Identifier of the user (email, username, etc.)
-companyid	|	Optional company identifier
-action	|	Action performed by the user
-message |	Descriptive message related to the action
-createdAt |	Date and time of log creation
+companyid (string)	|	Optional company identifier
+action	(string)|	Action performed by the user
+message (text)|	Descriptive message related to the action
+createdAt (datetime) |	Date and time of log creation
 
 4. The bundle provides a service to easily create log entries. Example usage:
 
@@ -67,5 +67,6 @@ Notes
 
 The log service can be injected in any controller or service using Symfony's autowiring.
 
-The createdAt field is automatically set when a log entry is created.
+The `createdAt` field is automatically set when a log entry is created.
+The `userIdentifier` field is automatically filled with the identifier of the currently authenticated user (email, username, etc.).
 
