@@ -9,7 +9,7 @@ class LogEntryExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container): void
     {
-        $container->registerForAutoconfiguration(
+        $container->register(
             \Beutsing\LogEntryBundle\Service\LogEntryService::class)
                 ->setAutowired(true)
                 ->setAutoconfigured(true)
