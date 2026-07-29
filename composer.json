@@ -3,9 +3,10 @@
     "description": "Recording of user activities.",
     "type": "symfony-bundle",
     "require": {
-        "symfony/framework-bundle": "^7.0",
+        "php": "^8.2",
+        "symfony/framework-bundle": "^7.0 || ^8.0",
         "doctrine/orm": "^3.0",
-        "symfony/security-bundle": "^7.0"
+        "symfony/security-bundle": "^7.0 || ^8.0"
     },
     "license": "MIT",
     "autoload": {
